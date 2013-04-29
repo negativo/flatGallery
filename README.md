@@ -16,3 +16,5 @@
                     ];
 	$(element).flatGallery(myImages);
 </pre> 
+<h3>Example:</h3>
+<img src="https://raw.github.com/negativo/flatGallery/master/flatGallery/flatGalleryScreen.png" />
