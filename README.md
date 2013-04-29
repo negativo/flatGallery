@@ -1,0 +1,1 @@
+FLAT GALLERY - simple jQuery Gallery with Flat Colors 
