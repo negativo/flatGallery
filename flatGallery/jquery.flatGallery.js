@@ -19,8 +19,15 @@
                     '<div class="buttonBig sizeButton button left" alt="226">Big<img src="../flatGallery/iconSize.png" width="18" style="padding:1px;"  /></div>'+
                 '</div>'+
                 '<div class="itemsPerPage left">'+
-                    '<select>'+
+                    '<select class="itemsPerPageSelect">'+
                         '<option value="-">items per page</option>'+
+                        '<option value="4">4</option>'+
+                        '<option value="5">5</option>'+
+                        '<option value="6">6</option>'+
+                        '<option value="7">7</option>'+
+                        '<option value="8">8</option>'+
+                        '<option value="9">9</option>'+
+                        '<option value="10">10</option>'+
                     '</select>'+
                 '</div>'+
                 '<div class="viewButtons right">'+
@@ -52,7 +59,7 @@
         base.init = function(){
             base.options = $.extend({},$.flatGallery.defaultOptions, options);
             base.toggleSizeButtons(base.options.view);
-            base.addContent(base.options.view);
+           
             base.updateCurrentPage();
             base.$el.find('.viewButton').each(function(){
                 if($(this).attr('alt')===base.options.view){
@@ -75,16 +82,21 @@
                                     '<img class="bigImage" src="" />'+
                                 '</div>';
             base.$el.append(blackBackground+imageContainer);
-
+             base.addContent(base.options.view);
         };
-
+ 
         base.currentThumbSize = function(){
             return base.$el.find('.sizeButtons').find('.active').text().toLowerCase();
         };
 
-        base.addContent = function(view){
+        base.addContent = function(view,elPerPage){
             
-            base.getElementsPerPage(view);
+            if(elPerPage){
+                base.options.elementsPerPage = elPerPage;
+                base.elementsPerPage = base.options.elementsPerPage ;
+            }else{
+                base.getElementsPerPage(view);
+            }
             base.totalPages = base.getTotalPages();
             base.updateCurrentPage();
             base.$el.find('.galleryBody').hide().html(' ');
@@ -104,7 +116,7 @@
                     }
                 }
             }else if(view==='thumb'){
-
+                
                 for( var j in data ){
                     if( j < parseInt((base.options.elementsPerPage * base.currentPage),10) && j >= parseInt((base.options.elementsPerPage * ( base.currentPage - 1 ) ),10)){
                         var thumb = base.getImageElementHtml(data[j].thumb, data[j].size,data[j].file,j);
@@ -254,6 +266,8 @@
             base.$el.find('.viewButton').removeClass('active');
             $(this).addClass('active');
             base.pageFirst();
+        }).delegate('.itemsPerPageSelect','change',function(){
+            base.addContent('thumb',$(this).val());
         }).delegate('.sizeButton','click',function(){
             var size=$(this).attr('alt');
             base.$el.find('.galleryBody').find('div').each(function(){
@@ -283,7 +297,7 @@
         
 
             base.init();   
-        
+            base.$el.find('.sizeButtons').find('.active').trigger('click');
     };
     $.flatGallery.defaultOptions = {
         view: "thumb",

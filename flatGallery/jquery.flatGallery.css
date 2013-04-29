@@ -2,6 +2,24 @@
   max-width: 960px;
   min-width: 330px;
 }
+.rootel .itemsPerPage {
+  background-color: #e74c3c;
+  width: 133px;
+  height: 34px;
+  overflow: hidden;
+  background: url(../flatGallery/iconArrowDown.png) no-repeat right #e74c3c;
+}
+.rootel .itemsPerPage select {
+  background: transparent;
+  width: 168px;
+  padding: 5px;
+  font-size: .9 em;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+  color: #fff;
+}
 .rootel .displaySelector,
 .rootel .galleryPaginator {
   height: 35px;
