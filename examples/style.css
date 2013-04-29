@@ -1,0 +1,61 @@
+/* ************ davide berardi - myBlizzGallery April 9, 2013 *************
+html {
+	font-family: "Helvetica", "Arial";
+	background-image: -webkit-gradient(linear, left top, left bottom,
+	    color-stop( 0.0, rgb(18, 66, 150) ),
+	    color-stop( 0.500, rgb(12, 39, 107) ),
+	    color-stop( 1.0, rgb(4, 16, 58) ));
+	background-image: -webkit-linear-gradient(top,
+	    rgb(18, 66, 150), 
+	    rgb(12, 39, 107) 50.0%,
+	    rgb(4, 16, 58) );
+	background-image: -moz-linear-gradient(top,
+	    rgb(18, 66, 150), 
+	    rgb(12, 39, 107) 50.0%,
+	    rgb(4, 16, 58) );
+	background-image: -ms-linear-gradient(top,
+	    rgb(18, 66, 150), 
+	    rgb(12, 39, 107) 50.0%,
+	    rgb(4, 16, 58) );
+	background-image: -o-linear-gradient(top,
+	    rgb(18, 66, 150), 
+	    rgb(12, 39, 107) 50.0%,
+	    rgb(4, 16, 58) );
+	background-image: linear-gradient(top,
+	    rgb(18, 66, 150), 
+	    rgb(12, 39, 107) 50.0%,
+    rgb(4, 16, 58) );
+  	background-repeat: no-repeat;
+  	background-color:  rgb(4, 16, 58);
+}
+
+#container{
+	margin:0 auto;
+	width:960px;
+}
+.blizzGalleryRoot{
+	margin-top:10px;
+	width:98%;
+	border: 5px solid rgb(27, 34, 43);
+	
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	box-shadow: 0 1px 2px rgba(0,0,0,.5);
+	background-color:rgb(33, 34, 94);
+	   box-shadow: 0px 0px 56px rgba(0, 0, 0, 0.91);
+    -moz-box-shadow: 0px 0px 56px rgba(0, 0, 0, 0.91);
+    -webkit-box-shadow: 0px 0px 56px rgba(0, 0, 0, 0.91);
+}*/
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.both{
+	clear:both;
+}

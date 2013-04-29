@@ -1,0 +1,172 @@
+.rootel {
+  max-width: 960px;
+  min-width: 330px;
+}
+.rootel .displaySelector,
+.rootel .galleryPaginator {
+  height: 35px;
+  padding: 1%;
+  max-width: 960px;
+  background-color: #c0392b;
+}
+.rootel .displaySelector .button {
+  font-size: 0pt;
+}
+.rootel .galleryPaginator {
+  bottom: 0px;
+}
+.rootel .pageSelector {
+  width: 200px;
+  margin: 0px auto;
+}
+.rootel .displayBigImage {
+  clear: both;
+  margin: 10px;
+  height: 300px;
+  width: 90%;
+}
+.rootel .button,
+.rootel .currentPage {
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  background-color: #c0392b;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  margin: 1px;
+}
+.rootel .pageSelector .button,
+.rootel .pageSelector .currentPage {
+  padding: 10px;
+}
+.rootel .pageSelector .currentPage {
+  cursor: default;
+}
+.rootel .dataList {
+  color: #c0392b;
+}
+.rootel .button:hover,
+.rootel .button.active {
+  background-color: #e74c3c;
+}
+.rootel .dataList {
+  width: 100%;
+}
+.rootel .dataList div {
+  float: left;
+  padding: 10px;
+}
+.rootel .galleryBody {
+  min-height: 450px;
+  background-color: #e74c3c;
+  text-align: center;
+}
+.rootel .galleryBody .thumbImage {
+  cursor: pointer;
+  position: relative;
+  margin-left: 0px;
+  margin-top: 0px;
+  border: 6px solid #c0392b;
+  display: inline-block;
+  text-align: center;
+}
+.rootel .galleryBody .thumbImage:hover {
+  border: 6px solid #2c3e50;
+}
+.rootel .galleryBody .thumbImageContainer {
+  display: inline-block;
+  margin: 30px;
+}
+.rootel .galleryBody table {
+  background-color: #2c3e50;
+}
+.rootel .galleryBody table .one {
+  background-color: #c0392b;
+  color: #e74c3c;
+}
+.rootel .galleryBody table .two {
+  background-color: #e74c3c;
+  color: #c0392b;
+}
+.rootel .galleryBody table th,
+.rootel .galleryBody table tr:hover {
+  background-color: #2c3e50;
+  color: #3498db;
+}
+.rootel .galleryBody table th,
+.rootel .galleryBody table .galleryBody td {
+  padding: 5px;
+  border: 1px solid #2c3e50;
+  border-collapse: collapse;
+}
+.rootel .blackFullScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.rootel .imageContainer {
+  position: absolute;
+  color: #fff;
+  top: 50px;
+  left: 0;
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+.rootel .close {
+  cursor: pointer;
+}
+.rootel .topbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 30px;
+}
+.rootel .topbar .button.close {
+  float: right;
+  margin: 10px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 27pt;
+  font-family: "Arial";
+  z-index: 10;
+}
+.rootel .arrow {
+  font-family: "Trebuchet";
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 27pt;
+  position: absolute;
+  margin-top: 30%;
+  z-index: 10;
+  cursor: pointer;
+}
+.rootel .arrow.previousPic {
+  left: 10px;
+}
+.rootel .arrow.nextPic {
+  right: 10px;
+}
+@media screen and (max-width: 1250px) {
+  .imageContainer img {
+    width: 80%;
+  }
+}
+@media screen and (max-height: 400px) {
+  .imageContainer img {
+    height: 80%;
+  }
+}
