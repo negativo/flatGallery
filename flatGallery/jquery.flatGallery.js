@@ -50,16 +50,31 @@
                 '</div>'+
             '</div>';
         };
-
-        base.$el.addClass('rootel');
-        base.$el.append(galleryViews);
-        base.$el.append(galleryBody);
-        base.$el.append(galleryPaginator);
+        var blackBackground = function(){
+            return '<div class="blackFullScreen close"  />' ;
+        };
+        var imageContainer = function(){
+            return  '<div class="topbar">'+
+                        '<div class="button previousPic arrow"><</div>'+
+                        '<div class="button nextPic arrow">></div>'+
+                        '<div class="button close">x</div>'+
+                    '</div>'+
+                    '<div class="imageContainer close" >'+
+                        '<img class="bigImage" src="" />'+
+                    '</div>';
+        };
+        
+        base.$el.addClass('rootel')
+                .append(galleryViews)
+                .append(galleryBody)
+                .append(galleryPaginator)
+                .append(blackBackground)
+                .append(imageContainer);
+        
 
         base.init = function(){
             base.options = $.extend({},$.flatGallery.defaultOptions, options);
             base.toggleSizeButtons(base.options.view);
-           
             base.updateCurrentPage();
             base.$el.find('.viewButton').each(function(){
                 if($(this).attr('alt')===base.options.view){
@@ -71,18 +86,8 @@
                 var thumbSize =  base.options.size.charAt(0).toUpperCase() + base.options.size.slice(1);
                 base.$el.find('.button'+thumbSize).trigger('click');
             }
-            // -- full screen layout
-            var blackBackground = '<div class="blackFullScreen close"  />' ;
-            var imageContainer = '<div class="topbar">'+
-                                    '<div class="button previousPic arrow"><</div>'+
-                                    '<div class="button nextPic arrow">></div>'+
-                                    '<div class="button close">x</div>'+
-                                '</div>'+
-                                '<div class="imageContainer close" >'+
-                                    '<img class="bigImage" src="" />'+
-                                '</div>';
-            base.$el.append(blackBackground+imageContainer);
-             base.addContent(base.options.view);
+            
+            base.addContent(base.options.view);
         };
  
         base.currentThumbSize = function(){
@@ -100,7 +105,7 @@
             base.totalPages = base.getTotalPages();
             base.updateCurrentPage();
             base.$el.find('.galleryBody').hide().html(' ');
-
+            var opt = base.options;
             if(view==='list'){
                 base.$el.find('.galleryBody').append('<table class="dataList">'+
                                                         '<tr>'+
@@ -110,20 +115,28 @@
                                                         '</tr>'+
                                                     '</table>');
                 for (var i in data){
-                    if( i < parseInt((base.options.elementsPerPage * base.currentPage),10) && i >= parseInt((base.options.elementsPerPage * ( base.currentPage - 1 )),10)){
+                    if( i < parseInt((opt.elementsPerPage * base.currentPage),10) && i >= parseInt((opt.elementsPerPage * ( base.currentPage - 1 )),10)){
                         var listElement = base.getListElementHtml(i,data[i]);
                         base.$el.find('.dataList').append(listElement);
                     }
                 }
             }else if(view==='thumb'){
-                
                 for( var j in data ){
-                    if( j < parseInt((base.options.elementsPerPage * base.currentPage),10) && j >= parseInt((base.options.elementsPerPage * ( base.currentPage - 1 ) ),10)){
+                    if( j < parseInt((opt.elementsPerPage * base.currentPage),10) && j >= parseInt((opt.elementsPerPage * ( base.currentPage - 1 ) ),10)){
                         var thumb = base.getImageElementHtml(data[j].thumb, data[j].size,data[j].file,j);
                         base.$el.find('.galleryBody').append($(thumb));
                     }
                 }
                 base.$el.find('.galleryBody').find('img').width(base.$el.find('.sizeButtons').find('.active').attr('alt'));
+            }
+            if(!opt.showSizeButtons){
+                base.$el.find('.sizeButtons').hide();
+            }
+            if(!opt.showViewButtons){
+                base.$el.find('.viewButtons').hide();
+            }
+            if(!opt.showPaginator){
+                base.$el.find('.galleryPaginator').hide();
             }
             base.$el.find('.galleryBody').fadeIn();
         };
@@ -233,6 +246,7 @@
         var margin;
         var imageMargin;
         var thumbSize;
+
         base.$el.find('.galleryBody').delegate('.thumbImage','click',function(){
             var that = $(this);
             return (function(){
@@ -294,14 +308,15 @@
                 base.pageNext();
             }
         });
-        
-
-            base.init();   
-            base.$el.find('.sizeButtons').find('.active').trigger('click');
+        base.init();
+        base.$el.find('.sizeButtons').find('.active').trigger('click');
     };
     $.flatGallery.defaultOptions = {
         view: "thumb",
         size: "medium",
+        showSizeButtons: true,
+        showViewButtons: true,
+        showPaginator: true,
         elementsPerPage: 8
     };
     $.fn.flatGallery = function(view, options){
