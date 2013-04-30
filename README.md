@@ -16,8 +16,8 @@
                     ];
 	$(element).flatGallery(myImages);
 </pre> 
-
-<h3>shows just the list</h3><br/>
+========================================================
+<h3>shows just the list</h3>
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
         view: "list", 
@@ -25,6 +25,7 @@
         showViewButtons: false
     }); 
 </pre>
+========================================================
 <h3>show just the gallery, default view is Thumbs</h3>
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
