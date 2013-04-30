@@ -40,9 +40,6 @@
         elementsPerPage: 10
     }); 
 </pre>
-
-<h3>First Basic Example:</h3>
-<img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png" />
 ========================================================
 <h3>to do:</h3>
 <ul>

@@ -15,9 +15,12 @@
         var galleryViews = function(){
             return '<div class="displaySelector both cool"> '+
                 '<div class="sizeButtons left"> '+
-                    '<div class="buttonSmall sizeButton button left" alt="111">Small<img src="../flatGallery/iconSize.png" width="10" style="padding:5px;" /></div>'+
-                    '<div class="buttonMedium sizeButton button left" alt="166">Medium<img src="../flatGallery/iconSize.png" width="14" style="padding:3px;"  /></div>'+
-                    '<div class="buttonBig sizeButton button left" alt="226">Big<img src="../flatGallery/iconSize.png" width="18" style="padding:1px;"  /></div>'+
+                    '<div class="buttonSmall sizeButton button left" alt="111">Small'+
+                        '<svg width="10" height="10" style="padding:8px;"><rect x="0" y="0" width="10" height="10" fill="white" /></svg></div>'+
+                    '<div class="buttonMedium sizeButton button left" alt="166">Medium'+
+                        '<svg width="13" height="13" style="padding:6px;"><rect x="0" y="0" width="13" height="13" fill="white" /></svg></div>'+
+                    '<div class="buttonBig sizeButton button left" alt="226">Big'+
+                        '<svg width="15" height="15" style="padding:5px;"><rect x="0" y="0" width="15" height="15" fill="white" /></svg></div>'+
                 '</div>'+
                 '<div class="itemsPerPage left">'+
                     '<select class="itemsPerPageSelect">'+
