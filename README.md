@@ -35,5 +35,13 @@
         elementsPerPage: 10
     }); 
 </pre>
-<h3>Example:</h3>
+<h3>First Basic Example:</h3>
 <img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png" />
+========================================================
+<h3>to do:</h3>
+<ul>
+    <li>improve graphic appearance</li>
+    <li>add more themes</li>
+    <li>refactor addcontent & init func</li>
+</ul>
+
