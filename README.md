@@ -47,6 +47,7 @@
 <h3>to do:</h3>
 <ul>
     <li>add touch events </li>
+    <li>add title & description </li>
     <li>improve data loading</li>
     <li>improve graphic appearance</li>
     <li>add more themes</li>
