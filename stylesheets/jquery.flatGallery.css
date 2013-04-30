@@ -41,7 +41,7 @@
   width: 133px;
   height: 34px;
   overflow: hidden;
-  background: url(./images/iconArrowDown.png) no-repeat right #34495e;
+  background: url(https://raw.github.com/negativo/flatGallery/gh-pages/images/iconArrowDown.png) no-repeat right #34495e;
 }
 .rootel .displaySelector .itemsPerPage select {
   background: transparent;
