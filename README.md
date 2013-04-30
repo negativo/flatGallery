@@ -35,11 +35,22 @@
         elementsPerPage: 10
     }); 
 </pre>
+
+<h3>Themes:</h3>
+<div style="margin:10px;display:inline-block;height:30px; width:30px;background-color:#c0392b;">
+</div>
+<div style="margin:10px;display:inline-block;height:30px; width:30px;background-color:#e74c3c;">
+</div>
+<div style="margin:10px;display:inline-block;height:30px; width:30px;background-color:#2c3e50;">
+</div>
+<div style="margin:10px;display:inline-block;height:30px; width:30px;background-color:#3498db;">
+</div>
 <h3>First Basic Example:</h3>
 <img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png" />
 ========================================================
 <h3>to do:</h3>
 <ul>
+    <li>add touch events </li>
     <li>improve graphic appearance</li>
     <li>add more themes</li>
     <li>refactor addcontent & init func</li>
