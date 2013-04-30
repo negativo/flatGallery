@@ -11,6 +11,7 @@
             medium : 8,
             big : 6
         };
+        var layout ="";
         var galleryViews = function(){
             return '<div class="displaySelector both cool"> '+
                 '<div class="sizeButtons left"> '+
@@ -70,6 +71,8 @@
                 .append(blackBackground)
                 .append(imageContainer);
         base.init = function(){
+            base.$el.find('.displaySelector').fadeIn();
+            base.$el.find('.galleryPaginator').fadeIn();
             base.options = $.extend({},$.flatGallery.defaultOptions, options);
             base.toggleSizeButtons(base.options.view);
             base.updateCurrentPage();
@@ -205,7 +208,7 @@
             if(view === 'list'){
                 base.$el.find('.sizeButtons').hide();
             }else{
-                base.$el.find('.sizeButtons').show();
+                base.$el.find('.sizeButtons').fadeIn();
             }
         };
         base.$el.find('.pageSelector').delegate('.button','click',function(){

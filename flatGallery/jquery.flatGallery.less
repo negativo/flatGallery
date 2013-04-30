@@ -21,6 +21,7 @@
 	min-width: 330px;
 	.displaySelector,
 	.galleryPaginator{
+		display: none;
 		height:35px;
 		padding:1%;
 		max-width: 960px;
@@ -121,11 +122,11 @@
 				background-color:@thirdColor ;
 			.one{
 				background-color:@mainColor ;
-				color:@secColor;
+				color:lighten(@fourthColor,30%);
 			}
 			.two{
 				background-color:@secColor; 
-				color:@mainColor;
+				color:@thirdColor;
 			}
 			th, tr:hover{
 				background-color:@thirdColor;
@@ -135,6 +136,10 @@
 				padding: 5px;
 				border:1px solid @thirdColor;
 				border-collapse:collapse;
+			}
+			td{
+				padding-top:10px;
+				padding-bottom:10px;
 			}
 		}
 	}
