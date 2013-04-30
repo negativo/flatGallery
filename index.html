@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Flatgallery by negativo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Flatgallery</h1>
+        <p>flat-ui inspired photo gallery </p>
+
+        <p class="view"><a href="https://github.com/negativo/flatGallery">View the Project on GitHub <small>negativo/flatGallery</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/negativo/flatGallery/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/negativo/flatGallery/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/negativo/flatGallery">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>FLAT GALLERY - simple jQuery Gallery with Flat Colors</h1>
+
+<p>
+    Hi everyone,
+    this is my first code open sourced, 
+    enjoy! :)
+</p>
+
+<h3>How to use:</h3>
+
+<pre>
+    var myImages = [
+                        ...
+
+                        {
+                            file: 'big image URL',
+                            thumb: 'thumb image URL',
+                            size: 'image size ',
+                            mime: 'image mime type'    
+                        }
+                        
+                        ...
+
+                    ];
+    $(element).flatGallery(myImages);
+</pre> 
+
+<h1></h1>
+
+<h3>shows just the list</h3>
+
+<pre>
+    $(".galleryRoot").flatGallery(myImages,{ 
+        view: "list", 
+        showSizeButtons: false, 
+        showViewButtons: false
+    }); 
+</pre>
+
+<h1></h1>
+
+<h3>show just the gallery, default view is Thumbs</h3>
+
+<pre>
+    $(".galleryRoot").flatGallery(myImages,{ 
+        showSizeButtons: false, 
+        showViewButtons: false,
+        showItemsPerPage: false,
+        elementsPerPage: 10
+    }); 
+</pre>
+
+<h3>First Basic Example:</h3>
+
+<h1><img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png"></h1>
+
+<h3>to do:</h3>
+
+<ul>
+<li>add touch events</li>
+<li>add title &amp; description</li>
+<li>improve data loading</li>
+<li>improve graphic appearance</li>
+<li>add more themes</li>
+<li>refactor addcontent &amp; init func</li>
+<li>replace png files with svg canvas</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/negativo">negativo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
