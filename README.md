@@ -1,4 +1,9 @@
 <h1>FLAT GALLERY - simple jQuery Gallery with Flat Colors</h1>
+<p>
+    Hi everyone,
+    this is my first code open sourced, 
+    enjoy! :)
+</p>
 <h3>How to use:</h3>
 <pre>
 	var myImages = [
@@ -46,5 +51,6 @@
     <li>improve graphic appearance</li>
     <li>add more themes</li>
     <li>refactor addcontent & init func</li>
+    <li>replace png files with svg canvas</li>
 </ul>
 
