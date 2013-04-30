@@ -17,22 +17,22 @@
 	$(element).flatGallery(myImages);
 </pre> 
 
-    <h3>shows just the list</h3>
-            <pre>
-            $(".galleryRoot").flatGallery(myImages,{ 
-                view: "list", 
-                showSizeButtons: false, 
-                showViewButtons: false
-            }); 
-            </pre>
-    <h2>show just the gallery, default view is Thumbs</h2>
-        <pre>
-            $(".galleryRoot").flatGallery(myImages,{ 
-                showSizeButtons: false, 
-                showViewButtons: false,
-                showItemsPerPage: false,
-                elementsPerPage: 10
-            }); 
-        </pre>
+<h3>shows just the list</h3><br/>
+<pre>
+    $(".galleryRoot").flatGallery(myImages,{ 
+        view: "list", 
+        showSizeButtons: false, 
+        showViewButtons: false
+    }); 
+</pre>
+<h2>show just the gallery, default view is Thumbs</h2>
+<pre>
+    $(".galleryRoot").flatGallery(myImages,{ 
+        showSizeButtons: false, 
+        showViewButtons: false,
+        showItemsPerPage: false,
+        elementsPerPage: 10
+    }); 
+</pre>
 <h3>Example:</h3>
 <img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png" />
