@@ -5,15 +5,11 @@
     <title>Photo Gallery </title>
     <link rel="stylesheet" href="../flatGallery/jquery.flatGallery.css">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <div id="images" ></div>
     <div id="container">
-        <div class="galleryRoot test">
-            
-           
-           
+        <div class="galleryRoot">
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -42,9 +38,26 @@
                     }
                 }
             });
+        
+            // shows just the list
+            /* $(".galleryRoot").flatGallery(myImages,{ 
+                view: "list", 
+                showSizeButtons: false, 
+                showViewButtons: false
+            }); */ 
+            
+            // show just the gallery, default view is Thumbs
+            $(".galleryRoot").flatGallery(myImages,{ 
+                showSizeButtons: false, 
+                showViewButtons: false,
+                showItemsPerPage: false,
+                elementsPerPage: 10
+            }); 
+
         });
     
-        $(".galleryRoot").flatGallery(myImages,{ showSizeButtons: false, showViewButtons: false}); //default view: thumb
+        
+        
         
     }); 
     </script>

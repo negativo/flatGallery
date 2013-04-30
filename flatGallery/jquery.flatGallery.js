@@ -63,15 +63,12 @@
                         '<img class="bigImage" src="" />'+
                     '</div>';
         };
-        
         base.$el.addClass('rootel')
                 .append(galleryViews)
                 .append(galleryBody)
                 .append(galleryPaginator)
                 .append(blackBackground)
                 .append(imageContainer);
-        
-
         base.init = function(){
             base.options = $.extend({},$.flatGallery.defaultOptions, options);
             base.toggleSizeButtons(base.options.view);
@@ -86,16 +83,12 @@
                 var thumbSize =  base.options.size.charAt(0).toUpperCase() + base.options.size.slice(1);
                 base.$el.find('.button'+thumbSize).trigger('click');
             }
-            
             base.addContent(base.options.view);
         };
- 
         base.currentThumbSize = function(){
             return base.$el.find('.sizeButtons').find('.active').text().toLowerCase();
         };
-
         base.addContent = function(view,elPerPage){
-            
             if(elPerPage){
                 base.options.elementsPerPage = elPerPage;
                 base.elementsPerPage = base.options.elementsPerPage ;
@@ -107,6 +100,7 @@
             base.$el.find('.galleryBody').hide().html(' ');
             var opt = base.options;
             if(view==='list'){
+                base.$el.find('.itemsPerPage').hide();
                 base.$el.find('.galleryBody').append('<table class="dataList">'+
                                                         '<tr>'+
                                                             '<th>Filename</th>'+
@@ -138,15 +132,15 @@
             if(!opt.showPaginator){
                 base.$el.find('.galleryPaginator').hide();
             }
+            if(!opt.showItemsPerPage){
+                base.$el.find('.itemsPerPage').hide();
+            }
             base.$el.find('.galleryBody').fadeIn();
         };
-
         base.getListElementHtml = function(index, obj){
-
             var color = (index % 2 === 0) ? "one" : "two";
             return '<tr class="'+color+'"><td>'+obj.file +'</td><td>'+ obj.size +'</td><td>'+ obj.mime +'</td></tr>';
         };
-
         base.getElementsPerPage = function (view){
             if(view==='list'){
                 base.options.elementsPerPage = 14;
@@ -156,29 +150,23 @@
                 base.elementsPerPage = base.options.elementsPerPage ;
             }
         };
-
         base.getTotalPages = function(){
             return (base.options.elementsPerPage !== 10 ) ? parseInt((data.length / base.options.elementsPerPage) + 1,10) : parseInt(data.length / base.options.elementsPerPage,10);
         };
-
         base.getImageElementHtml = function(url,size,rel,index){
-
             return '<div class="thumbImageContainer" style="margin:30px;">'+
                         '<img class="thumbImage" src="'+url+'" alt="'+size+'" data-big="'+rel+'" data-index="'+index+'" />'+
                     '</div>';
         };
-
         base.updateCurrentPage = function(){
             base.$el.find('.currentPage').html(base.currentPage+'/'+base.totalPages);
         };
         base.picNext = function(){
 
         };
-
         base.picPrevious = function(){
 
         };
-
         base.closeImage = function(){
             base.isFullScreen = 0;
             base.$el.find('.topbar').hide();
@@ -300,7 +288,6 @@
         }).delegate('.close','click',function(){
             base.closeImage();
         });
-        
         $(document.documentElement).keyup(function (event) {
             if (event.keyCode == 37) {
                 base.pagePrevious();
@@ -317,6 +304,7 @@
         showSizeButtons: true,
         showViewButtons: true,
         showPaginator: true,
+        showItemsPerPage: true,
         elementsPerPage: 8
     };
     $.fn.flatGallery = function(view, options){

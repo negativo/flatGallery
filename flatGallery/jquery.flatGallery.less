@@ -2,32 +2,16 @@
 @secColor:#e74c3c;
 @thirdColor:#2c3e50;
 @fourthColor:#3498db;
+
+@mainColor:#2c3e50;
+@secColor:#34495e;
+@thirdColor:#2c3e50;
+@fourthColor:#3498db;
+
+
 .rootel{
 	max-width: 960px;
 	min-width: 330px;
-
-	.itemsPerPage{
-		
-		background-color: @secColor;
-		width: 133px;
-		height: 34px;
-	    overflow: hidden;
-	    background: url(../flatGallery/iconArrowDown.png) no-repeat right @secColor;
-	    
-		select {
-		
-		   background: transparent;
-		   width: 168px;
-		   padding: 5px;
-		   font-size: .9 em;
-			
-		   border: 0;
-		   border-radius: 0;
-		   height: 34px;
-		   -webkit-appearance: none;
-		   color:#fff;
-   		}
-   	}
 	.displaySelector,
 	.galleryPaginator{
 		height:35px;
@@ -36,18 +20,42 @@
 		background-color:@mainColor;
 	}
 	.displaySelector{
+
 		.button{
 			font-size: 0pt;
 		}
-	}
-
+		.itemsPerPage{
+			background-color: @secColor;
+			width: 133px;
+			height: 34px;
+		    overflow: hidden;
+		    background: url(../flatGallery/iconArrowDown.png) no-repeat right @secColor;
+			select {
+			   background: transparent;
+			   width: 168px;
+			   padding: 5px;
+			   font-size: .9 em;
+			   border: 0;
+			   border-radius: 0;
+			   height: 34px;
+			   -webkit-appearance: none;
+			   color:#fff;
+	   		}
+	   	}
+    }
 	.galleryPaginator{
-		
 		bottom:0px;
-	}
-	.pageSelector{
-		width:200px;
-		margin:0px auto;
+		.pageSelector{
+			width:200px;
+			margin:0px auto;
+			.button,.currentPage{
+				padding:10px;
+			}
+
+			.currentPage{
+				cursor: default;
+			}
+		}
 	}
 	.displayBigImage{
 		clear:both;
@@ -63,7 +71,6 @@
 		text-decoration: none;
 		font: 14px/100% Arial, Helvetica, sans-serif;
 		padding: .5em 2em .55em;
-
 		background-color: @mainColor;
 		color:#fff;
 		cursor:pointer;
@@ -71,32 +78,22 @@
 		
 		margin:1px;
 	}
-	.pageSelector {
-		.button,.currentPage{
-			padding:10px;
+	.button{
+		&:hover, &.active{
+			background-color: @secColor;
 		}
-
-		.currentPage{
-			cursor: default;
-		}
-	}
-	.dataList{
-		color:@mainColor;	
-	}
-	.button:hover, .button.active{
-		background-color: @secColor;
 	}
 	
 	.dataList{
+		color:@mainColor;
 		width:100%;
-	}
-	.dataList div {
-		float:left;
-		padding:10px;
-
+		div {
+			float:left;
+			padding:10px;
+		}
 	}
 	.galleryBody{
-		min-height: 450px;
+		min-height: 350px;
 		background-color:@secColor;
 		text-align: center;
 		.thumbImage{
@@ -180,37 +177,35 @@
 			font-family: "Arial";
 			z-index: 10;
 		}
-	}
-	.arrow{
-		font-family: "Trebuchet";
-		padding:20px;
-		padding-top:10px;
-		padding-bottom:10px;
-		font-size: 27pt;
-		position: absolute;
-		margin-top: 30%;
-		z-index: 10;
-		cursor: pointer;
 	
-		&.previousPic{
-			left:10px;
+		.arrow{
+			font-family: "Trebuchet";
+			padding:20px;
+			padding-top:10px;
+			padding-bottom:10px;
+			font-size: 27pt;
+			position: absolute;
+			margin-top: 30%;
+			z-index: 10;
+			cursor: pointer;
+		
+			&.previousPic{
+				left:10px;
+			}
+			&.nextPic{
+				right:10px;
+			}
 		}
-		&.nextPic{
-			right:10px;
+	}
+	@media screen and (max-width:1250px){
+		.imageContainer img{
+			max-width:80%;
 		}
 	}
-
-
-}
-@media screen and (max-width:1250px){
-	.imageContainer img{
-		width:80%;
+	@media screen and (max-height:400px){
+		.imageContainer img{
+			max-height:80%;
+		}
 	}
 }
-@media screen and (max-height:400px){
-	.imageContainer img{
-		height:80%;
-	}
-}
-
 
