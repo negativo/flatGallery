@@ -25,7 +25,7 @@
         showViewButtons: false
     }); 
 </pre>
-<h2>show just the gallery, default view is Thumbs</h2>
+<h3>show just the gallery, default view is Thumbs</h3>
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
         showSizeButtons: false, 
