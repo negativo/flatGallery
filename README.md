@@ -4,6 +4,8 @@
     this is my first code open sourced, 
     enjoy! :)
 </p>
+
+Demo -> <a href="http://negativo.github.io/flatGallery/">Here!</a>
 <h3>How to use:</h3>
 <pre>
 	var myImages = [

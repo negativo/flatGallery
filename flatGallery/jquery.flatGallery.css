@@ -14,6 +14,15 @@
   max-width: 960px;
   min-width: 330px;
 }
+.rootel .left {
+  float: left;
+}
+.rootel .right {
+  float: right;
+}
+.rootel .both {
+  clear: both;
+}
 .rootel .displaySelector,
 .rootel .galleryPaginator {
   display: none;
