@@ -1,51 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="http://negativo.github.io/flatGallery/stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://negativo.github.io/flatGallery/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://negativo.github.io/flatGallery/stylesheets/print.css" media="print" />
-     <link rel="stylesheet" href="http://negativo.github.io/flatGallery/stylesheets/jquery.flatGallery.css">
-    
+    <title>Flatgallery by negativo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <title>Flatgallery by negativo</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Flatgallery</h1>
+        <p class="header">flat-ui inspired photo gallery </p>
 
-        <header>
-          <h1>Flatgallery</h1>
-          <h2>flat-ui inspired photo gallery </h2>
-        </header>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/negativo/flatGallery/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/negativo/flatGallery/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/negativo/flatGallery">View On GitHub</a></li>
+        </ul>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/negativo/flatGallery/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/negativo/flatGallery/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/negativo/flatGallery" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/negativo">negativo</a></p>
 
-        <hr>
 
-        <section id="main_content">
-          <h3>FLAT GALLERY - simple jQuery Gallery with Flat Colors</h3>
+      </header>
+      <section>
+        <h3>
+<a name="flat-gallery---simple-jquery-gallery-with-flat-colors" class="anchor" href="#flat-gallery---simple-jquery-gallery-with-flat-colors"><span class="octicon octicon-link"></span></a>FLAT GALLERY - simple jQuery Gallery with Flat Colors</h3>
 
 <p>Hi everyone,
 this is my first code open sourced, 
 enjoy! :)</p>
 
-<h3>Example:  <a target="_blank" href="http://rawgithub.com/negativo/flatGallery/master/examples/index.html">Here!</a>
-<h3>How to use:</h3></h3>
+<h3>
+<a name="example--here" class="anchor" href="#example--here"><span class="octicon octicon-link"></span></a>Example:  <a target="_blank" href="http://rawgithub.com/negativo/flatGallery/master/examples/index.html">Here!</a>
+</h3>
 
-        <div class="galleryRoot">
-        </div>
-<h3>How to use:</h3>
+<h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use:</h3>
 
 <pre>
     var myImages = [
@@ -66,7 +63,8 @@ enjoy! :)</p>
 
 <h1></h1>
 
-<h3>shows just the list</h3>
+<h3>
+<a name="shows-just-the-list" class="anchor" href="#shows-just-the-list"><span class="octicon octicon-link"></span></a>shows just the list</h3>
 
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
@@ -78,7 +76,8 @@ enjoy! :)</p>
 
 <h1></h1>
 
-<h3>show just the gallery, default view is Thumbs</h3>
+<h3>
+<a name="show-just-the-gallery-default-view-is-thumbs" class="anchor" href="#show-just-the-gallery-default-view-is-thumbs"><span class="octicon octicon-link"></span></a>show just the gallery, default view is Thumbs</h3>
 
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
@@ -89,9 +88,15 @@ enjoy! :)</p>
     }); 
 </pre>
 
+<h3>
+<a name="first-basic-example" class="anchor" href="#first-basic-example"><span class="octicon octicon-link"></span></a>First Basic Example:</h3>
 
+<h1>
+<a name="-2" class="anchor" href="#-2"><span class="octicon octicon-link"></span></a><img src="https://raw.github.com/negativo/flatGallery/master/flatGalleryScreen.png">
+</h1>
 
-<h3>to do:</h3>
+<h3>
+<a name="to-do" class="anchor" href="#to-do"><span class="octicon octicon-link"></span></a>to do:</h3>
 
 <ul>
 <li>add touch events</li>
@@ -102,22 +107,22 @@ enjoy! :)</p>
 <li>refactor addcontent &amp; init func</li>
 <li>replace png files with svg canvas</li>
 </ul>
-
-        
-
-        </section>
-
-        <footer>
-          Flatgallery is maintained by <a href="https://github.com/negativo">negativo</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://raw.github.com/negativo/flatGallery/gh-pages/javascripts/jquery.flatGallery.js"></script>
-    <script src="https://raw.github.com/negativo/flatGallery/gh-pages/javascripts/main.js"></script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);    ga(&#39;create&#39;, &#39;UA-41993629-1&#39;, &#39;negativo.github.io&#39;);   ga(&#39;send&#39;, &#39;pageview&#39;);  &lt;/script&gt;");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
   </body>
 </html>
