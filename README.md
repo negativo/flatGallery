@@ -1,8 +1,8 @@
 <h1>FLAT GALLERY - simple jQuery Gallery with Flat Colors</h1>
 <p>
     Hi everyone,
-    this is my first code open sourced, 
-    enjoy! :)
+    this is my first project opensourced, 
+    
 </p>
 
 Demo -> <a target="_blank" href="http://rawgithub.com/negativo/flatGallery/master/examples/index.html">Here!</a>
@@ -25,6 +25,7 @@ Demo -> <a target="_blank" href="http://rawgithub.com/negativo/flatGallery/maste
 </pre> 
 ========================================================
 <h3>shows just the list</h3>
+
 <pre>
     $(".galleryRoot").flatGallery(myImages,{ 
         view: "list", 
