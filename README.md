@@ -5,7 +5,7 @@
     
 </p>
 
-Demo -> <a target="_blank" href="http://rawgithub.com/negativo/flatGallery/master/examples/index.html">Here!</a>
+Demo -> <a target="_blank" href="http://www.davideberardi.com/flatGallery/examples/index.html">Here!</a>
 <h3>How to use:</h3>
 <pre>
 	var myImages = [

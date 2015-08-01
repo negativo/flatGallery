@@ -7,61 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="container">
-        <div class="galleryRoot">
+    <div style="width:100%;height:40px;line-height:40px;font-size:25px;text-align:center;">Flickr Feed -> tags: "art"</div>
+    <div id="container" style="margin">
+        <div class="galleryRoot" style="margin:0 auto;">
         </div>
         
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../flatGallery/jquery.flatGallery.js"></script>
-    
     <script type="text/javascript">
 
     $(document).ready(function(){
         var myImages = [];
-        $.getJSON("http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=e7e44a4a7906e181bb0407245c48550a&user_id=29096781@N02&per_page=12&page=4&format=json&jsoncallback=?", function(data) {
-            var items = [];
-         
-            $.each(data, function(key, val) {
-            
-                for (var x in val){
-                    if($.isArray(val[x])){
-                        var value = val[x];
-                        for(var i in value){
-                            myImages.push({
-                                file: 'http://farm'+value[i].farm+'.staticflickr.com/'+value[i].server+'/'+value[i].id+'_'+value[i].secret+'.jpg',
-                                thumb: 'http://farm'+value[i].farm+'.staticflickr.com/'+value[i].server+'/'+value[i].id+'_'+value[i].secret+'_t.jpg',
-                                size: '800x600',
-                                mime: 'image/jpeg'    
-                            });
-                        }
-                    }
-                }
-            });
-            $(".galleryRoot").flatGallery(myImages);
-            // shows just the list
-            /* $(".galleryRoot").flatGallery(myImages,{ 
-                view: "list", 
-                showSizeButtons: false, 
-                showViewButtons: false
-            }); */ 
-            
-            // show just the gallery, default view is Thumbs
-            /*$(".galleryRoot").flatGallery(myImages,{ 
-                showSizeButtons: false, 
-                showViewButtons: false,
-                showItemsPerPage: false,
-                elementsPerPage: 10
-            }); 
-            */
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",        {
+          tags: "art",
+          tagmode: "any",
+          format: "json"
+        },
+        function(data) {
 
+          $.each(data.items, function(i,item){
+            myImages.push({
+             file:item.media.m,
+             thumb: item.media.m,
+             size: '800x600',
+             mime: 'image/jpeg'    
+            });
+           
+            if ( i == 30 ) return false;
+          });
         });
-    
-        
-        
-        
+      
+         $(".galleryRoot").flatGallery(myImages);
     }); 
+         
+
+
     </script>
 </body>
 </html>

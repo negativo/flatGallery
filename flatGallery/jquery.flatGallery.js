@@ -90,6 +90,9 @@
                 base.$el.find('.button'+thumbSize).trigger('click');
             }
             base.addContent(base.options.view);
+            setTimeout(function(){
+                $('body').find('.buttonMedium').trigger('click');
+            },600);
         };
         base.currentThumbSize = function(){
             return base.$el.find('.sizeButtons').find('.active').text().toLowerCase();
@@ -248,7 +251,7 @@
                 base.$el.find('.blackFullScreen').fadeIn();
                 base.$el.find('.imageContainer').fadeIn();
                 base.$el.find('.topbar').fadeIn();
-                base.$el.find('.imageContainer').find('img').attr('src',that.attr('data-big')).attr('data-index',that.attr('data-index'));
+                base.$el.find('.imageContainer').find('img').attr('src',that.attr('data-big')).css({'min-width':'400px'}).attr('data-index',that.attr('data-index'));
             })();
         }).delegate('.thumbImage','mouseover',function(){
             
